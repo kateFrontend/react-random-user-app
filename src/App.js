@@ -21,19 +21,19 @@ function App() {
   // Function to fetch users
 
   const getPerson = async () => {
-    const response = await fetch(url)
-    const data = await response.json()
-    const person = data.results[0]
-    const { phone, email } = person
-    const { large: image } = person.picture // to get nested properties out of the object
-    const {password} = person.login
-    const { first, last } = person.name
+    const response = await fetch(url);
+    const data = await response.json();
+    const person = data.results[0];
+    const { phone, email } = person;
+    const { large: image } = person.picture; // to get nested properties out of the object
+    const { password } = person.login;
+    const { first, last } = person.name;
     const {
       dob: { age },
-    } = person
+    } = person;
     const {
       street: { number, name },
-    } = person.location
+    } = person.location;
 
     const newPerson = {
       image,
@@ -45,19 +45,20 @@ function App() {
       name: `${first} ${last}`,
     };
 
-    setPerson(newPerson)
-    setLoading(false)
-    setTitle("name")
-    setValue(newPerson.name)
+    setPerson(newPerson);
+    setLoading(false);
+    setTitle("name");
+    setValue(newPerson.name);
   };
 
   useEffect(() => {}, []);
 
   const handleValue = (e) => {
-    if(e.target.classList.contains('icon')) {   // check if the target that hover over have a class of icon
+    if (e.target.classList.contains("icon")) {
+      // check if the target that hover over have a class of icon
       const newValue = e.target.dataset.label;
-      setTitle(newValue)
-      setValue(person[newValue]) // dynamically access the property value by passing in the property
+      setTitle(newValue);
+      setValue(person[newValue]); // dynamically access the property value by passing in the property
     }
   };
 
