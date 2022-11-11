@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 const url = "https://randomuser.me/api/";
-const defaultImage = "https://randomuser.me/api/portraits/men/75.jpg";
+const defaultImage = "https://randomuser.me/api/portraits/women/95.jpg";
 
 function App() {
   const [loading, setLoading] = useState(true);
