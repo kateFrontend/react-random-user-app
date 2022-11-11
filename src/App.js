@@ -64,6 +64,7 @@ function App() {
     }
   };
 
+
   return (
     <main>
       <div className="block bcg-black"></div>
@@ -83,6 +84,7 @@ function App() {
               className="icon"
               data-label="name"
               onMouseOver={handleValue}
+              onClick={(e) => {setTitle("name", setValue(person.name))}}
             >
               <FaUser />
             </button>
@@ -90,16 +92,22 @@ function App() {
               className="icon"
               data-label="email"
               onMouseOver={handleValue}
+              onClick={(e) => {setTitle("email", setValue(person.email))}}
             >
               <FaEnvelopeOpen />
             </button>
-            <button className="icon" data-label="age" onMouseOver={handleValue}>
+            <button className="icon"
+            data-label="age"
+            onMouseOver={handleValue}
+            onClick={(e) => {setTitle("age", setValue(person.age))}}
+            >
               <FaCalendarTimes />
             </button>
             <button
               className="icon"
               data-label="street"
               onMouseOver={handleValue}
+              onClick={(e) => {setTitle("street", setValue(person.street))}}
             >
               <FaMap />
             </button>
@@ -107,6 +115,7 @@ function App() {
               className="icon"
               data-label="phone"
               onMouseOver={handleValue}
+              onClick={(e) => {setTitle("phone", setValue(person.phone))}}
             >
               <FaPhone />
             </button>
@@ -114,6 +123,7 @@ function App() {
               className="icon"
               data-label="password"
               onMouseOver={handleValue}
+              onClick={(e) => {setTitle("password", setValue(person.password))}}
             >
               <FaLock />
             </button>
