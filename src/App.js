@@ -51,7 +51,9 @@ function App() {
     setValue(newPerson.name);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getPerson()
+  }, []);
 
   const handleValue = (e) => {
     if (e.target.classList.contains("icon")) {
