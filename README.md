@@ -22,9 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-  <p>
-  <!--  <a href="№">View Demo Here</a> -->
-  </p>
 
 ## Built With
 
@@ -35,8 +32,7 @@ You may also see any lint errors in the console.
 
 <p>By default you can see a user default image and loading button.</p>
 <p>You need to click on the button to get random user information.</p>
-<p>When you hover the icons you can see different user information such a full name, email, age, street, phone number and password.</p>
-<p></p>
-<p></p>
+<p>When you hover the icons or click on it you can see different user information such a full name, email, age, street, phone number and password.</p>
+
 
 Project Link: https://github.com/kateFrontend/React-random-user-app
