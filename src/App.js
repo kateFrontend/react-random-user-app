@@ -54,7 +54,11 @@ function App() {
   useEffect(() => {}, []);
 
   const handleValue = (e) => {
-    console.log(e.target);
+    if(e.target.classList.contains('icon')) {   // check if the target that hover over have a class of icon
+      const newValue = e.target.dataset.label;
+      setTitle(newValue)
+      setValue(person[newValue]) // dynamically access the property value by passing in the property
+    }
   };
 
   return (
@@ -69,7 +73,7 @@ function App() {
             alt="Random user"
             className="user-img"
           />
-          <p className="user-title">my {title} is</p>
+          <p className="user-title">My {title} is</p>
           <p className="user-value">{value}</p>
           <div className="values-list">
             <button
